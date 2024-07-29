@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: spring-security-jwt-0auth
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/authdb
+    username: postgres
+    password: 1998
+    initialization-mode: always
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        hbm2ddl.auto: update
+
+  mvc:
+    throw-exception-if-no-handler-found: true
+    resources:
+      add-mappings: false
